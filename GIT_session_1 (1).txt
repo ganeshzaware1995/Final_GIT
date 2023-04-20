@@ -1,0 +1,172 @@
+Web hosting?
+1.A web hosting service is type of Internet hosting service that allows 
+individuals and organization to make thier website accessible via world
+wide web.
+
+2.Web hosts are companies that provide space on a server leased for use bye clients as well as
+providing internet connectivity,typically in data center.
+
+source_control Managemnet-----Bitkeeper(company)
+
+{vcs----Verion control system
+dvcs----Distributed version control system}
+
+What is GIT?
+
+Git is Distributed version control system for tracking changes in source code during s/w developement/ 
+it is desiginged for coordinating work among programmers,but it can be to track changes in any 
+set of files,The goals include speed,data integrity and support for 'distributed'.
+
+Note:- Git is totally working command line utility the help of git bash(
+windows)
+
+Release:-7th of April 2005
+
+operation system:- POSIX(Linux,Unix,AIX,Solaris),macOS,Windows
+
+REpository:-git.kernel..org/pub/scm/git/git/git/
+
+Licence:-GPLv2(small company),LGPLv2.1(Large company)
+
+website:- git-scm.com
+
+Father of git:- Linus Torvalds
+
+git was totally made ny linux kernel.
+
+Git lateset version:-27 july 2020 ----2.28.0
+
+
+chapter_2:-   
+              What is VCS?
+
+VCS stands for version control system.
+
+There are 3 types VCS
+
+1.Local VCS:-
+locla vcs are totaly depends upon backend database,it's pull the file
+or folder and also push it similarlly,and main thing of local vcs it's
+track the data. it's a first concept who is that much capacity to do
+this type data fetching.
+
+but the main draw back is if your local sys is damaged your total data was destroy,
+and we have no option to recover this data again. and second drawback is you do not
+share your data any device.
+
+adv:- Roll back is avialable in loacla vcs.
+
+2.Centralized VCS:-Centralized VCS are totaly depends upon  server, and main thing 
+is one to many person are at a time a are used this server for push and pull the files,and 
+it's track the file date also person name who is changes tha data as wll as,
+
+if server was damaged all data was deleted,but only few imp data are saved by any user, if he/she knows 
+that matter,and in the case of server if many person are worked at a time,it's very slow to push and pull method.
+
+3.Distributed VCS:-Distributed VCS are totaly depends upon cloud,and every data are separated 
+by each developer,who is working in own project.if one side of cloud was crashed,so that ni impact other data,
+and other data are saved by the could and local system.
+
+
+
+Pratical:-
+
+Identity provides to git
+there two identity provides to git one is name another is email id.
+
+git config --global user.name "your_name"
+git config --global user.email "your@gmail.com"
+
+how check?
+git config user.name
+git config user.email
+
+
+ 1.$ git init--create a repo on this file
+
+2. $ git status(check the status)
+
+On branch master
+No commits yet
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        biswajit_110cv[1].docx
+        firs_class.txt
+
+*** file should be in red color--means--this fils is untracked
+
+
+
+3. git add --a   ----stageing are complgte(Unstage to Stage)
+
+means files should be going to stageing area and file also tracked.
+
+ note: if you add single file:- git add .
+
+4.$ git status
+On branch master
+
+No commits yet
+
+Changes to be committed:
+  (use "git rm --cached <file>..." to unstage)
+        new file:   biswajit_110cv[1].docx
+        new file:   firs_class.txt
+
+5.$ git commit -m "first_repo"(Version control)
+
+[master (root-commit) 706f107] first_repo
+ 2 files changed, 1 insertion(+)
+ create mode 100644 biswajit_110cv[1].docx
+ create mode 100644 firs_class.txt
+
+
+6.$ git status
+On branch master
+nothing to commit, working tree clean
+
+
+8.git remote add origin 'paste SSH key'(Repository add)
+
+9.git branch -M main(change master to main and main to master)
+
+10.git push -u origin main (code send local to cloud)
+
+for push the local system to git repositoty
+
+7.
+if have no idea how generate ssh then go to this link:-
+https://docs.github.com/en/free-pro-team@latest/github/authenticating-to-github/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent
+
+how Create a SSH key>
+
+1.ssh-keygen -t rsa -b 4096 -C "your_email@example.com"
+2.eval $(ssh-agent -s)
+3.ssh-add ~/.ssh/id_rsa
+4.tail ~/.ssh/id_rsa.pub
+
+then you will get your SSH key
+
+then paste is in SSH key location.
+
+location:-settings:-SSH and GPG KEYS:-New SSH key
+
+
+
+
+***Pull of code ***
+In the git when you pull the code that's called cloning.
+
+1.git clone 'SSH key/HTTPS keys'
+
+
+$ git clone git@github.com:itpp-labs/misc-addons.git
+Cloning into 'misc-addons'...
+Warning: Permanently added the RSA host key for IP address '13.234.176.102' to the list of known hosts.
+remote: Enumerating objects: 40, done.
+remote: Counting objects: 100% (40/40), done.
+remote: Compressing objects: 100% (34/34), done.
+remote: Total 28999 (delta 8), reused 14 (delta 2), pack-reused 28959
+Receiving objects: 100% (28999/28999), 29.47 MiB | 2.23 MiB/s, done.
+Resolving deltas: 100% (17933/17933), done.
