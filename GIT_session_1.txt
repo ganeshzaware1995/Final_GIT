@@ -127,6 +127,10 @@ to unstage the file from staging area
 On branch master
 nothing to commit, working tree clean
 
+master branch repository used by client side people 
+we a tester works on main branch so that if anything happens to code it will not 
+directly impacting the client side system.
+So we connect remote repository from cloud to our main  branch.
 
 8.git remote add origin 'paste SSH key'(Repository add)
 
